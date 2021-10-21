@@ -1,41 +1,30 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { MainComponent } from './Components/main/main.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { AccessURLComponent } from "./Components/access-url/access-url.component";
+import { CreateShortUrlComponent } from "./Components/create-short-url/create-short-url.component";
+import { FindStatsComponent } from "./Components/find-stats/find-stats.component";
+import { HomeComponent } from "./Components/home/home.component";
+import { MainComponent } from "./Components/main/main.component";
+import { PageNotFoundComponent } from "./Components/page-not-found/page-not-found.component";
+import { StatsComponent } from "./Components/stats/stats.component";
 
 const routes: Routes = [
+  { path: "home", component: HomeComponent },
+  { path: "create", component: CreateShortUrlComponent },
+  { path: "find-stats", component: FindStatsComponent },
+  { path: "stats/:sKey", component: StatsComponent },
 
-    // default route 1
-    { path: "", component: MainComponent},
-    // default route 2
-    // { path: "", redirectTo: "/tutor/subjects", pathMatch: "full" },
-  
-    // // tutor
-    // { path: "tutor", component: TutorSubjectsComponent },
-    // { path: "tutor/createSubject", component: CreateSubjectComponent },
-    // { path: "tutor/tests", component: TutorTestsComponent },
-    // { path: "tutor/tests/uploadTest", component: UploadTestComponent },
-    // { path: "tutor/tests/studentList", component: StudentListComponent },
-  
-    // // student
-    // { path: "student", component: StudentSubjectsComponent },
-    // { path: "student/tests", component: StudentTestsComponent },
-    // { path: "student/tests/takeTest", component: TakeTestComponent },
-  
-    // // misc
-    // { path: "about", component: AboutComponent },
-    // { path: "report", component: ReportComponent },
-  
-    // // unauthorize error page
-    // { path: "unauthorized", component: UnauthorizedComponent },
-  
-    // // page not found route ALWAYS at last
-    // { path: "**", component: PageNotFoundComponent }
+  { path: "main", component: MainComponent },
 
+  // access the url
+  { path: ":sKey", component: AccessURLComponent },
+
+  // page not found route ALWAYS at last
+  { path: "**", component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

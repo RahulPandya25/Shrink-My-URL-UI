@@ -1,0 +1,14 @@
+----- Stats -----
+<br />
+<br />
+id: {{ map.id || "NULL" }}
+<br />
+shortUrlKey: {{ map.shortUrlKey || "NULL" }} &nbsp;&nbsp;
+<button (click)="copyToClipboard()">Copy to Clipboard</button>
+<br />
+longUrl: {{ map.longUrl || "NULL" }} &nbsp;&nbsp;
+<button (click)="visitUrl()">Visit Page</button>
+<br />
+accessCount: {{ map.accessCount || "0" }}
+<br />
+timeToLive: {{ map.timeToLive || "0" }} <br />
