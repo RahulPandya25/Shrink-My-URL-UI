@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './Components/main/main.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
 
     // default route 1
-    { path: "", component: MainComponent},
+    { path: "", component: AppComponent},
     // default route 2
     // { path: "", redirectTo: "/tutor/subjects", pathMatch: "full" },
   
