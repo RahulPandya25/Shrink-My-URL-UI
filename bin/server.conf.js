@@ -4,7 +4,6 @@
 
 var express = require("express");
 var cors = require("cors");
-var path = require("path");
 
 var app = express();
 
@@ -17,11 +16,9 @@ app.use(
 );
 
 //make angular dist folder available for public
-app.use(express.static(path.join(__dirname, ANGULAR_BUNDLE)));
+app.use(express.static("./"+ANGULAR_BUNDLE));
 
-// all the other request should be redirected to angular app
-app.use("*", express.static(path.join(__dirname, ANGULAR_BUNDLE)));
-
+app.get('/*', (req, res) => res.sendFile('index.html', {root: ANGULAR_BUNDLE+"/"}));
 
 var http = require("http");
 
