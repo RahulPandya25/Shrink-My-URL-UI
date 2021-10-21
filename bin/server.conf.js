@@ -23,7 +23,6 @@ app.use(express.static(path.join(__dirname, ANGULAR_BUNDLE)));
 app.use("*", express.static(path.join(__dirname, ANGULAR_BUNDLE)));
 
 
-var debug = require("debug")("mean-app:server");
 var http = require("http");
 
 var port = process.env.PORT || "4300";
@@ -34,7 +33,5 @@ server.listen(port);
 server.on("listening", onListening);
 
 function onListening() {
-  var addr = server.address();
-  debug("Listening on " + port);
   console.log("Listening on " + port);
 }
