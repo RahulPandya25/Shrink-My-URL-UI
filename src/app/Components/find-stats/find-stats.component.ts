@@ -24,20 +24,23 @@ export class FindStatsComponent implements OnInit {
 
   fetchStats = () => {
     if (this.longUrl !== "" || this.shortUrl !== "") {
-      let isShortUrlKey = this.shortUrl !== "";
+      let isShortUrlKey = this.longUrl === "";
       this.urlMapService
         .fetchStatsForThisUrlUsingMapKey(this.longUrl, isShortUrlKey)
-        .subscribe((res: any) => {
-          if (res.ok) {
-            let data: UrlMap = res.body;
-            this.router.navigateByUrl("/stats/" + data.shortUrlKey);
-          } else {
+        .subscribe(
+          (res: any) => {
+            if (res.ok) {
+              let data: UrlMap = res.body;
+              this.router.navigateByUrl("/stats/" + data.shortUrlKey);
+            }
+          },
+          (error: any) => {
             // Todo: something went wrong please try again
             this.showError(
               "Okiess! I couldn't find anything related to what you entered! how about trying that again!!"
             );
           }
-        });
+        );
     } else {
       this.showError(
         "Hmm! looks like you didn't enter either one of above fields! Please enter them first :)"
