@@ -24,7 +24,7 @@ export class FindStatsComponent implements OnInit {
 
   fetchStats = () => {
     if (this.longUrl !== "" || this.shortUrl !== "") {
-      let isShortUrlKey = this.longUrl === "";
+      let isShortUrlKey = this.longUrl === "" || false;
       this.urlMapService
         .fetchStatsForThisUrlUsingMapKey(this.longUrl, isShortUrlKey)
         .subscribe(
