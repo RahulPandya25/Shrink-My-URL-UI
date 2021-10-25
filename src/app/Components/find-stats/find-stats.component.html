@@ -1,3 +1,34 @@
-<div class="body">
+<form class="body" (ngSubmit)="fetchStats()">
   <div class="breadcrum">Home/FindStats/</div>
-</div>
+
+  <div class="shortUrl">
+    <label for="shortUrl">Expire after</label>
+    <input
+      type="text"
+      name="shortUrl"
+      [(ngModel)]="shortUrl"
+      id="shortUrl"
+      required
+    />
+  </div>
+
+  <div class="longUrl">
+    <label for="longUrl">URL to Shrink</label>
+    <input
+      type="text"
+      name="longUrl"
+      [(ngModel)]="longUrl"
+      id="longUrl"
+      required
+    />
+  </div>
+
+  <button class="emboss-button button" type="submit">Find Stats!</button>
+  <span
+    [ngClass]="{
+      show: hasError
+    }"
+    class="error-msg"
+    >{{ errorMessage }}</span
+  >
+</form>

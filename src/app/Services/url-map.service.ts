@@ -9,11 +9,22 @@ export class UrlMapService {
   private url = ConstantsService.BASE_API_URL + "/url";
 
   accessThisUrl(shortUrlKey: String) {
-    return this.http.get(this.url + "/" + shortUrlKey + "false");
+    return this.http.get(this.url + "/" + shortUrlKey + "/false");
   }
 
   fetchStatsForThisUrl(shortUrlKey: String) {
-    return this.http.get(this.url + "/" + shortUrlKey + "true");
+    return this.http.get(this.url + "/" + shortUrlKey + "/true");
+  }
+
+  fetchStatsForThisUrlUsingMapKey(urlKey: String, isShortUrlKey: boolean) {
+    return this.http.post(
+      this.url + "/fetch",
+      {
+        urlKey: urlKey,
+        isShortUrlKey: isShortUrlKey,
+      },
+      { observe: "response" }
+    );
   }
 
   shrinkThisUrl(longUrl: String, timeToLive: number) {
