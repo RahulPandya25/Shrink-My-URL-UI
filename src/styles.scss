@@ -121,6 +121,13 @@ $breakpoint-desktop: 1024px;
 }
 
 .breadcrum {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(var(--secondary-bg-color)),
+    to(transparent)
+  );
   background-image: linear-gradient(var(--secondary-bg-color), transparent);
   width: 100%;
   height: var(--highlight-height);
