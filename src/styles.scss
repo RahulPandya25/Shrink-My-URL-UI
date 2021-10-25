@@ -120,11 +120,7 @@ $breakpoint-desktop: 1024px;
 }
 
 .breadcrum {
-  background-image: linear-gradient(
-    to bottom,
-    var(--secondary-bg-color),
-    transparent
-  );
+  background-image: linear-gradient(var(--secondary-bg-color), transparent);
   width: 100%;
   height: var(--highlight-height);
   display: flex;
