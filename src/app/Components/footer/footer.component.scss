@@ -1,4 +1,14 @@
+.highlight {
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    var(--secondary-bg-color)
+  );
+  height: var(--highlight-height);
+}
+
 .body {
+  background-color: var(--secondary-bg-color);
   padding: 0.75rem 0;
 
   display: flex;
