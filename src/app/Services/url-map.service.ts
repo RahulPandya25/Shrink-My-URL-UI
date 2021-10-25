@@ -9,7 +9,11 @@ export class UrlMapService {
   private url = ConstantsService.BASE_API_URL + "/url";
 
   accessThisUrl(shortUrlKey: String) {
-    return this.http.get(this.url + "/" + shortUrlKey);
+    return this.http.get(this.url + "/" + shortUrlKey + "false");
+  }
+
+  fetchStatsForThisUrl(shortUrlKey: String) {
+    return this.http.get(this.url + "/" + shortUrlKey + "true");
   }
 
   shrinkThisUrl(longUrl: String, timeToLive: number) {

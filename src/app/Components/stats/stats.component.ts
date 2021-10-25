@@ -41,7 +41,7 @@ export class StatsComponent implements OnInit {
 
     if (this.shortUrlKey) {
       // if key found
-      this.urlMapService.accessThisUrl(this.shortUrlKey).subscribe(
+      this.urlMapService.fetchStatsForThisUrl(this.shortUrlKey).subscribe(
         (data: any) => {
           this.map = data;
           this.shortUrl =
