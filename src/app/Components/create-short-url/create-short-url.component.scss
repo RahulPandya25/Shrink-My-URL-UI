@@ -30,3 +30,15 @@
   margin: 2rem 0;
   padding: 0.5rem 1rem;
 }
+
+.error-msg {
+  opacity: 0;
+  width: 80%;
+  color: var(--primary-accent);
+
+  transition: var(--primary-transition);
+
+  &.show {
+    opacity: 1;
+  }
+}

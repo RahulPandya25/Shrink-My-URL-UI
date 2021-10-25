@@ -10,6 +10,7 @@ import { UrlMapService } from "src/app/Services/url-map.service";
 })
 export class StatsComponent implements OnInit {
   shortUrlKey: String | undefined;
+  shortUrl: String | undefined;
   map: any;
 
   redirectToHome = () => {
@@ -43,6 +44,8 @@ export class StatsComponent implements OnInit {
       this.urlMapService.accessThisUrl(this.shortUrlKey).subscribe(
         (data: any) => {
           this.map = data;
+          this.shortUrl =
+            ConstantsService.SHORT_KEY_URL_PREFIX + this.shortUrlKey;
         },
         (error: any) => {
           // valid key not found redirect to home page

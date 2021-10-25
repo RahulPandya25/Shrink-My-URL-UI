@@ -22,4 +22,11 @@
     />
   </div>
   <button class="emboss-button button" type="submit">Shrink it!</button>
+  <span
+    [ngClass]="{
+      show: hasError
+    }"
+    class="error-msg"
+    >{{ errorMessage }}</span
+  >
 </form>

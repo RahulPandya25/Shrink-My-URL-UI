@@ -58,8 +58,9 @@ $breakpoint-desktop: 1024px;
   --pale-grey: #f0f0f0;
   --green: #35d371;
 
-  --lime-accent: #9acb34;
-  --teal-accent: #45ada8;
+  --lime-accent: #92c798;
+  --teal-accent: #45a4ad;
+  --light-teal-accent: #76c1c8;
   --blue-accent: #4285f4;
   --yellow-accent: #fce100;
   --green-accent: #16c60c;
@@ -85,7 +86,8 @@ $breakpoint-desktop: 1024px;
   --primary-text-color: var(--dark);
   --primary-bg-color: var(--light);
   --secondary-bg-color: var(--pale-yellow);
-  --secondary-accent: var(--teal-accent);
+  --secondary-accent: var(--lime-accent);
+  --tertiary-accent: var(--teal-accent);
   --highlight-height: 2.5rem;
 
   --primary-transition: all 0.25s ease-in-out;
@@ -106,16 +108,15 @@ $breakpoint-desktop: 1024px;
 .emboss-button {
   all: unset;
 
-  box-shadow: var(--emboss);
-  border: 2px solid var(--secondary-accent);
-  color: var(--primary-text-color);
-  border-radius: 5px;
+  background-color: var(--secondary-accent);
+  color: var(--primary-bg-color);
+  border-radius: 8px;
   transition: var(--primary-transition);
   &:hover,
   &:focus {
-    color: var(--primary-accent);
+    background-color: var(--light-teal-accent);
     cursor: pointer;
-    box-shadow: var(--emboss-focus);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -130,6 +131,6 @@ $breakpoint-desktop: 1024px;
   left: 0;
 
   padding: 0.25rem 0.25rem 0.25rem 0.25rem;
-  color: var(--secondary-accent);
+  color: var(--tertiary-accent);
   font-size: 0.9rem;
 }

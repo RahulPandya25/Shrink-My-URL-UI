@@ -9,6 +9,9 @@ import { UrlMapService } from "src/app/Services/url-map.service";
   styleUrls: ["./create-short-url.component.scss"],
 })
 export class CreateShortUrlComponent implements OnInit {
+  hasError = false;
+  errorMessage =
+    "Oops! looks like you have't entered the URL yet! Please enter that first ;)";
   longUrl = "";
   timeToLive = 3;
 
@@ -25,6 +28,11 @@ export class CreateShortUrlComponent implements OnInit {
             this.router.navigateByUrl("/");
           }
         });
+    } else {
+      this.hasError = true;
+      setTimeout(() => {
+        this.hasError = false;
+      }, 5000);
     }
   };
 
