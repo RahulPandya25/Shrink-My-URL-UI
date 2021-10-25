@@ -126,9 +126,12 @@ $breakpoint-desktop: 1024px;
     left top,
     left bottom,
     from(var(--secondary-bg-color)),
-    to(transparent)
+    to(rgba(255, 255, 255, 0))
   );
-  background-image: linear-gradient(var(--secondary-bg-color), transparent);
+  background-image: linear-gradient(
+    var(--secondary-bg-color),
+    rgba(255, 255, 255, 0)
+  );
   width: 100%;
   height: var(--highlight-height);
   display: flex;
