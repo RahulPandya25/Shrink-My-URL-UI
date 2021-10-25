@@ -14,6 +14,7 @@ import { CreateShortUrlComponent } from "./Components/create-short-url/create-sh
 import { FindStatsComponent } from "./Components/find-stats/find-stats.component";
 import { StatsComponent } from "./Components/stats/stats.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     CreateShortUrlComponent,
     FindStatsComponent,
     StatsComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

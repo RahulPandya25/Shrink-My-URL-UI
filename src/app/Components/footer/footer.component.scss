@@ -1,0 +1,25 @@
+.body {
+  padding: 0.75rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-name,
+.credits {
+  color: var(--primary-text-color);
+}
+
+.app-name {
+  font-size: 0.85rem;
+}
+
+.credits {
+  font-size: 0.85rem;
+  a {
+    color: var(--primary-accent);
+    text-decoration: none;
+  }
+}

@@ -1,21 +1,25 @@
-<form (ngSubmit)="shrinkThisUrl()">
-  <label for="longUrl">URL to Shrink: </label>
-  <input
-    type="text"
-    name="longUrl"
-    [(ngModel)]="longUrl"
-    id="longUrl"
-    required
-  />
-  <br /><br />
-  <label for="timeToLive">Expire after: </label>
-  <input
-    type="number"
-    name="timeToLive"
-    [(ngModel)]="timeToLive"
-    id="timeToLive"
-    required
-  />
-  <br /><br />
-  <button type="submit">Shrink it!</button>
+<form class="body" (ngSubmit)="shrinkThisUrl()">
+  <div class="breadcrum">Home/NewLink/</div>
+
+  <div class="url">
+    <label for="longUrl">URL to Shrink</label>
+    <input
+      type="text"
+      name="longUrl"
+      [(ngModel)]="longUrl"
+      id="longUrl"
+      required
+    />
+  </div>
+  <div class="expiry">
+    <label for="timeToLive">Expire after</label>
+    <input
+      type="number"
+      name="timeToLive"
+      [(ngModel)]="timeToLive"
+      id="timeToLive"
+      required
+    />
+  </div>
+  <button class="emboss-button button" type="submit">Shrink it!</button>
 </form>

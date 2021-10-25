@@ -22,7 +22,7 @@ export class CreateShortUrlComponent implements OnInit {
             this.router.navigateByUrl("/stats/" + data.shortUrlKey);
           } else {
             // Todo: something went wrong please try again
-            this.router.navigateByUrl("/home");
+            this.router.navigateByUrl("/");
           }
         });
     }

@@ -1,0 +1,14 @@
+.body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+
+.create,
+.find {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+
+  font-size: 1.5rem;
+}

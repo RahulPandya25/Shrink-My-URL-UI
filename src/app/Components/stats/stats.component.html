@@ -1,14 +1,28 @@
------ Stats -----
-<br />
-<br />
-id: {{ map.id || "NULL" }}
-<br />
-shortUrlKey: {{ map.shortUrlKey || "NULL" }} &nbsp;&nbsp;
-<button (click)="copyToClipboard()">Copy to Clipboard</button>
-<br />
-longUrl: {{ map.longUrl || "NULL" }} &nbsp;&nbsp;
-<button (click)="visitUrl()">Visit Page</button>
-<br />
-accessCount: {{ map.accessCount || "0" }}
-<br />
-timeToLive: {{ map.timeToLive || "0" }} <br />
+<div class="body">
+  <div class="breadcrum">Home/Statistics/</div>
+  <div class="long-url">
+    <p class="label">Your URL</p>
+    <p class="content">{{ map.longUrl }}</p>
+    <button class="emboss-button button" (click)="visitUrl()">
+      Visit Page
+    </button>
+  </div>
+
+  <div class="short-url">
+    <p class="label">Generated URL</p>
+    <p class="content">{{ map.shortUrlKey }}</p>
+    <button class="emboss-button button" (click)="copyToClipboard()">
+      Copy to Clipboard
+    </button>
+  </div>
+
+  <div class="access-count">
+    <p class="label">Link Accessed</p>
+    <p class="content">{{ map.accessCount }} times</p>
+  </div>
+
+  <div class="expiry">
+    <p class="label">Expires After</p>
+    <p class="content">{{ map.timeToLive }}</p>
+  </div>
+</div>

@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from "./Components/page-not-found/page-not-foun
 import { StatsComponent } from "./Components/stats/stats.component";
 
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
+  { path: "", component: HomeComponent },
   { path: "create", component: CreateShortUrlComponent },
   { path: "find-stats", component: FindStatsComponent },
   { path: "stats/:sKey", component: StatsComponent },

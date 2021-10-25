@@ -12,7 +12,7 @@ export class AccessURLComponent implements OnInit {
 
   redirectToHome = () => {
     // TODO: pass info to home that valid short url not found
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/");
   };
 
   constructor(

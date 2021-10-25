@@ -1,0 +1,28 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.long-url,
+.short-url,
+.access-count,
+.expiry {
+  margin: 0.8rem 0;
+
+  .label {
+    font-size: 0.8rem;
+    color: var(--secondary-accent);
+  }
+
+  .content {
+    color: var(--primary-accent);
+  }
+
+  .button {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
